@@ -10,6 +10,6 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.mongodb+srv://knabin251:8kQKzwLMbuqHD3Qs@cluster0.jvkpuvu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0)
   .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
   .catch(err => console.error(err));
